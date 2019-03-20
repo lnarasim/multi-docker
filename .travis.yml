@@ -23,5 +23,3 @@ after_success:
   - docker push rabyourfreedom/multi-nginx
   - docker push rabyourfreedom/multi-server
   - docker push rabyourfreedom/multi-worker
-
-
