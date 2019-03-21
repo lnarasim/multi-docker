@@ -20,8 +20,21 @@
             "name": "worker",
             "image": "grabyourfreedom/multi-worker",
             "hostname": "worker",
-            "essential": true,
+            "essential": false,
             "memory": 128
+        },
+        {
+            "name": "nginx",
+            "image": "grabyourfreedom/multi-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "server"]
         }
     ]
 }
