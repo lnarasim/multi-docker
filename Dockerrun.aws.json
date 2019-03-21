@@ -20,7 +20,7 @@
             "name": "worker",
             "image": "grabyourfreedom/multi-worker",
             "hostname": "worker",
-            "essential": false,
+            "essential": true,
             "memory": 128
         }
     ]
