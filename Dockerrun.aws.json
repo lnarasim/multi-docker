@@ -14,7 +14,8 @@
             "image": "grabyourfreedom/multi-server",
             "hostname": "api",
             "essential": false,
-            "memory": 256        },
+            "memory": 256        
+        },
         {
             "name": "worker",
             "image": "grabyourfreedom/multi-worker",
