@@ -6,7 +6,8 @@
             "name": "client",
             "image": "grabyourfreedom/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "server",
