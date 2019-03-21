@@ -19,7 +19,20 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Push images to Docker Hub
-  - docker push rabyourfreedom/multi-client
-  - docker push rabyourfreedom/multi-nginx
-  - docker push rabyourfreedom/multi-server
-  - docker push rabyourfreedom/multi-worker
+  - docker push grabyourfreedom/multi-client
+  - docker push grabyourfreedom/multi-nginx
+  - docker push grabyourfreedom/multi-server
+  - docker push grabyourfreedom/multi-worker
+
+  deploy:
+    provider: elasticbeanstalk
+    region: us-east-1
+    app: multi-docker
+    env: MultiDocker-env
+    bucket_name: elasticbeanstalk-us-east-1-793820337215
+    bucket_path: docker-multi
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+      secure: $AWS_SECRET_KEY
