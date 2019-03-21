@@ -6,22 +6,19 @@
             "name": "client",
             "image": "grabyourfreedom/multi-client",
             "hostname": "client",
-            "essential": false,
-            "memory": 128
+            "essential": false
         },
         {
             "name": "server",
             "image": "grabyourfreedom/multi-server",
             "hostname": "api",
-            "essential": false,
-            "memory": 128        
+            "essential": false
         },
         {
             "name": "worker",
             "image": "grabyourfreedom/multi-worker",
             "hostname": "worker",
-            "essential": false,
-            "memory": 128
+            "essential": false
         },
         {
             "name": "nginx",
@@ -34,8 +31,7 @@
                     "containerPort": 80
                 }
             ],
-            "links": ["client", "server"],
-            "memory": 128
+            "links": ["client", "server"]
         }
     ]
 }
